@@ -1,7 +1,6 @@
 import { Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
-import { TrackingComponent } from './tracking/tracking.component';
 
 export const routes: Routes = [
   {
@@ -11,13 +10,19 @@ export const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
-  },
-  {
-    path: 'tracking',
-    component: TrackingComponent,
+    children: [
+      {
+        path: '',
+        loadComponent: () => import('./dashboard/shipments/shipments.component').then(m => m.ShipmentsComponent)
+      },
+      {
+        path: 'tracking',
+        loadComponent: () => import('./dashboard/tracking/tracking.component').then(m => m.TrackingComponent)
+      }
+    ]
   },
   {
     path: '**',
-    redirectTo: 'login',
+    redirectTo: '',
   }
 ];
