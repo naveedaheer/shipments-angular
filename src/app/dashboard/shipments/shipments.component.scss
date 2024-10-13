@@ -1,0 +1,28 @@
+.search-input {
+    border: 1px solid #CCCCCC;
+    border-radius: 2px;
+
+    &:focus-visible {
+        outline: none;
+    }
+}
+
+table {
+    width: 100%;
+    border-radius: 2px;
+}
+
+th,
+td {
+    padding: 16px;
+}
+
+.btn-primary {
+    background-color: #29185C;
+    padding: 4px 12px;
+    border: none;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 400;
+    box-shadow: 0px 1px 3px 1px #00000026;
+}

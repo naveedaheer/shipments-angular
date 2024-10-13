@@ -1,1 +1,56 @@
-<p>shipments works!</p>
+<div class="m-4 p-4 bg-light border rounded">
+  <div class="d-flex flex-column gap-4">
+    <h2>Shipments</h2>
+
+    <div class="d-flex flex-column gap-2">
+      <div class="d-flex align-items-center position-relative w-25">
+        <input type="text" placeholder="Search" class="w-100 p-2 search-input">
+        <img src="../../../assets/icons/search.svg" class="position-absolute end-0 pe-2" alt="">
+      </div>
+      <div>
+        <table class="table table-borderless">
+          <thead class="border-bottom">
+            <tr>
+              <th scope="col" class="bg-dark text-light fw-normal">Manifested Date</th>
+              <th scope="col" class="bg-dark text-light fw-normal">Tracking No.</th>
+              <th scope="col" class="bg-dark text-light fw-normal">Tracking Status</th>
+              <th scope="col" class="bg-dark text-light fw-normal">Customer Ref</th>
+              <th scope="col" class="bg-dark text-light fw-normal">Carrier Profile</th>
+              <th scope="col" class="bg-dark text-light fw-normal">Amount</th>
+              <th scope="col" class="bg-dark text-light fw-normal">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>11/10/2024</td>
+              <td>MP0041110892</td>
+              <td>In Transit</td>
+              <td>N/A</td>
+              <td>BBA Driver Direct</td>
+              <td>663.21 AUD</td>
+              <td><button type="button" class="btn btn-primary btn-sm" (click)="detailView()">Tracking</button></td>
+            </tr>
+            <tr>
+              <td>11/10/2024</td>
+              <td>MP0041110192</td>
+              <td>In Transit</td>
+              <td>N/A</td>
+              <td>BBA Driver Direct</td>
+              <td>263.21 AUD</td>
+              <td><button type="button" class="btn btn-primary btn-sm" (click)="detailView()">Tracking</button></td>
+            </tr>
+            <tr>
+              <td>11/10/2024</td>
+              <td>MP0041113192</td>
+              <td>In Transit</td>
+              <td>N/A</td>
+              <td>BBA Driver Direct</td>
+              <td>563.21 AUD</td>
+              <td><button type="button" class="btn btn-primary btn-sm" (click)="detailView()">Tracking</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
