@@ -1,0 +1,36 @@
+.stepper-container {
+    height: 15%;
+    border-radius: 2px;
+    background-color: #fff;
+    box-shadow: 0px 1px 3px 1px #00000026;
+}
+
+.tracking-container {
+    height: 55%;
+
+    .left {
+        width: 50%;
+        border-radius: 2px;
+        background-color: #fff;
+        box-shadow: 0px 1px 3px 1px #00000026;
+    }
+
+    .right {
+        width: 50%;
+        border-radius: 2px;
+        background-color: #fff;
+        box-shadow: 0px 1px 3px 1px #00000026;
+
+        p {
+            min-width: 150px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.event-container {
+    // height: 15%;
+    border-radius: 2px;
+    background-color: #fff;
+    box-shadow: 0px 1px 3px 1px #00000026;
+}

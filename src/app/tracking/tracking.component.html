@@ -1,1 +1,50 @@
-<p>tracking works!</p>
+<div class="d-flex flex-column gap-4 m-4 h-100">
+    <div class="stepper-container p-3">
+        <app-tracking-status-step-bar></app-tracking-status-step-bar>
+    </div>
+    <div class="tracking-container d-flex gap-4">
+        <div class="left d-flex justify-content-center align-items-center p-3">
+            <p>No Tracking Map Available</p>
+        </div>
+        <div class="right p-5">
+            <h2>Order Details:</h2>
+                <div class="d-flex flex-column gap-3">
+                    <div class="d-flex gap-5">
+                        <p>Consignment Number:</p>
+                        <span>74231333</span>
+                    </div>
+                    <div class="d-flex gap-5">
+                        <p>Source Address:</p>
+                        <span>123 test street, Melbourne 3000, Australia</span>
+                    </div>
+                    <div class="d-flex gap-5">
+                        <p>Destination Address:</p>
+                        <span>123 test street, Sydney 2000, New South Wales Australia</span>
+                    </div>
+                    <div class="d-flex gap-5">
+                        <p>Booking Status:</p>
+                        <span>Booking Complete</span>
+                    </div>
+                    <div class="d-flex gap-5">
+                        <p>Tracking Status:</p>
+                        <span>In transit</span>
+                    </div>
+                    <div class="d-flex gap-5">
+                        <p>Carrier:</p>
+                        <span>BBA Carrier</span>
+                    </div>
+                    <div class="d-flex gap-5">
+                        <p>Carrier Profile:</p>
+                        <span>BBA Carrier - First Mile</span>
+                    </div>
+                    <div class="d-flex gap-5">
+                        <p>Service Profile:</p>
+                        <span>BBA Carrier - First Mile(Standard)</span>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="event-container p-3">
+        <app-tracking-events></app-tracking-events>
+    </div>
+</div>
