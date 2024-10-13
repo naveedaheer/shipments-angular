@@ -1,25 +1,35 @@
 <div class="container h-100">
   <div class="d-flex flex-column gap-4 justify-content-center align-items-center h-100">
     <div class="mb-2">
-      <img src="../assets/logo/bba-logo.svg" class="img-fluid" alt="">
+      <img src="../assets/logo/bba-logo.svg" class="img-fluid" alt="logo image">
     </div>
     <div class="card">
       <div class="card-body d-flex justify-content-center align-items-center">
-        <form class="w-100 p-4">
+        <form [formGroup]="loginForm" (ngSubmit)="submit()" class="w-100 p-4">
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1"
+              aria-describedby="emailHelp">
             <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            @if(loginForm.get('email')?.invalid && loginForm.get('email')?.touched){
+            <p class="text-danger">Valid email is required</p>
+            }
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
+            @if(loginForm.get('password')?.invalid && loginForm.get('password')?.touched){
+            <p class="text-danger">Password is required</p>
+            }
           </div>
           <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">Check me out</label>
           </div>
-          <button mat-raised-button color="primary" (click)="submit()">Login</button>
+          <button type="submit" mat-raised-button color="primary" [disabled]="loginForm.invalid">Login</button>
+          @if(loginError){
+          <p class="text-danger">Invalid email or password</p>
+          }
         </form>
       </div>
     </div>
