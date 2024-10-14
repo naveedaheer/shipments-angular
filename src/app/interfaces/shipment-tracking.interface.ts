@@ -50,5 +50,6 @@ export interface Shipment {
   bookingStatus: string;
   manifestedDate: string | null;
   id: string;
+  consignmentId: string;
   trackingEvents: TrackingEvent[];
 }

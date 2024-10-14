@@ -1,47 +1,22 @@
 <div>
-    <h2>Tracking Events</h2>
+  <h2>Tracking Events</h2>
 
-    <table class="table table-borderless">
-        <thead class="border-bottom">
-            <tr>
-                <th scope="col" class="bg-dark text-light fw-normal">Manifested Date</th>
-                <th scope="col" class="bg-dark text-light fw-normal">Tracking No.</th>
-                <th scope="col" class="bg-dark text-light fw-normal">Tracking Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="pt-3">
-                <td>11/10/2024</td>
-                <td>MP0041110892</td>
-                <td>In Transit</td>
-            </tr>
-            <tr>
-                <td>11/10/2024</td>
-                <td>MP0041110192</td>
-                <td>In Transit</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <table class="table table-borderless">
-        <thead class="border-bottom">
-            <tr>
-                <th scope="col" class="bg-dark text-light fw-normal">Manifested Date</th>
-                <th scope="col" class="bg-dark text-light fw-normal">Tracking No.</th>
-                <th scope="col" class="bg-dark text-light fw-normal">Tracking Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="pt-3">
-                <td>11/10/2024</td>
-                <td>MP0041110892</td>
-                <td>In Transit</td>
-            </tr>
-            <tr>
-                <td>11/10/2024</td>
-                <td>MP0041110192</td>
-                <td>In Transit</td>
-            </tr>
-        </tbody>
-    </table>
+  <table class="table table-borderless">
+    <thead class="border-bottom">
+      <tr>
+        <th scope="col" class="bg-dark text-light fw-normal">Date</th>
+        <th scope="col" class="bg-dark text-light fw-normal">Location</th>
+        <th scope="col" class="bg-dark text-light fw-normal">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (item of trackingEvents; track item) {
+      <tr class="pt-3">
+        <td>{{item?.timestamp | date:'medium'}}</td>
+        <td>{{item?.location}}</td>
+        <td>{{item?.status}}</td>
+      </tr>
+      }
+    </tbody>
+  </table>
 </div>

@@ -11,40 +11,40 @@
                 <div class="d-flex flex-column gap-3">
                     <div class="d-flex gap-5">
                         <p>Consignment Number:</p>
-                        <span>74231333</span>
+                        <span>{{shipment?.consignmentId}}</span>
                     </div>
                     <div class="d-flex gap-5">
                         <p>Source Address:</p>
-                        <span>123 test street, Melbourne 3000, Australia</span>
+                        <span>{{shipment?.sourceAddress?.addressLine1}}</span>
                     </div>
                     <div class="d-flex gap-5">
                         <p>Destination Address:</p>
-                        <span>123 test street, Sydney 2000, New South Wales Australia</span>
+                        <span>{{shipment?.destinationAddress?.addressLine1}}</span>
                     </div>
                     <div class="d-flex gap-5">
                         <p>Booking Status:</p>
-                        <span>Booking Complete</span>
+                        <span>{{shipment?.bookingStatus}}</span>
                     </div>
                     <div class="d-flex gap-5">
                         <p>Tracking Status:</p>
-                        <span>In transit</span>
+                        <span>{{shipment?.trackingStatus}}</span>
                     </div>
                     <div class="d-flex gap-5">
                         <p>Carrier:</p>
-                        <span>BBA Carrier</span>
+                        <span>{{shipment?.carrier}}</span>
                     </div>
                     <div class="d-flex gap-5">
                         <p>Carrier Profile:</p>
-                        <span>BBA Carrier - First Mile</span>
+                        <span>{{shipment?.carrierProfile}}</span>
                     </div>
                     <div class="d-flex gap-5">
                         <p>Service Profile:</p>
-                        <span>BBA Carrier - First Mile(Standard)</span>
+                        <span>{{shipment?.serviceProfile}}</span>
                     </div>
                 </div>
         </div>
     </div>
     <div class="event-container p-3">
-        <app-tracking-events></app-tracking-events>
+        <app-tracking-events [trackingEvents]="shipment?.trackingEvents"></app-tracking-events>
     </div>
 </div>
