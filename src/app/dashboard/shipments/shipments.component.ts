@@ -21,6 +21,8 @@ export class ShipmentsComponent {
 
   ngOnInit(): void {
     this.fetchShipments();
+    const resizeEvent = new Event('resize');
+    window.dispatchEvent(resizeEvent);
   }
 
   fetchShipments(): void {
