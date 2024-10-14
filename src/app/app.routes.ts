@@ -16,7 +16,7 @@ export const routes: Routes = [
         loadComponent: () => import('./dashboard/shipments/shipments.component').then(m => m.ShipmentsComponent)
       },
       {
-        path: 'tracking',
+        path: 'tracking/:id',
         loadComponent: () => import('./dashboard/tracking/tracking.component').then(m => m.TrackingComponent)
       }
     ]
