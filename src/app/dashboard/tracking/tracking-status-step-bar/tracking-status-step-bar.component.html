@@ -1,1 +1,7 @@
-<p>tracking-status-step-bar works!</p>
+<mat-stepper labelPosition="bottom">
+    @for(status of trackingStatusList; track status;  let i = $index) {
+    <mat-step [editable]="false" [completed]="isCompleted(i)">
+        <ng-template matStepLabel>{{status}}</ng-template>
+    </mat-step>
+    }
+</mat-stepper>
