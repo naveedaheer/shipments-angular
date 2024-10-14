@@ -32,7 +32,6 @@ export class TrackingStatusStepBarComponent {
     const currentIndex = this.trackingStatusList.findIndex((status: string) =>
       this.normalizeStatus(status) === this.normalizeStatus(this.currentStatus || '')
     );
-    console.log("currentIndex ", currentIndex )
     return currentIndex !== -1 && index < currentIndex;
   }
 

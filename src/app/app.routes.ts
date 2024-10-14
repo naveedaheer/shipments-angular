@@ -10,7 +10,7 @@ export const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
-    data: { breadcrumb: 'Dashboard' },
+    data: { title: 'Dashboard' },
     children: [
       {
         path: '',
@@ -19,7 +19,7 @@ export const routes: Routes = [
       {
         path: 'tracking/:id',
         loadComponent: () => import('./dashboard/tracking/tracking.component').then(m => m.TrackingComponent),
-        data: { breadcrumb: 'Tracking' }
+        data: { title: 'Tracking' }
       }
     ]
   },
