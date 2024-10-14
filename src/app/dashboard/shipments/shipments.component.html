@@ -4,7 +4,7 @@
 
     <div class="d-flex flex-column gap-2">
       <div class="d-flex align-items-center position-relative w-25">
-        <input type="text" placeholder="Search" class="w-100 p-2 search-input">
+        <input type="text" placeholder="Search" class="w-100 p-2 search-input" (input)="searchShipments($event)">
         <img src="../../../assets/icons/search.svg" class="position-absolute end-0 pe-2" alt="">
       </div>
       <div>
@@ -27,7 +27,7 @@
               <td>{{item?.trackingNumber}}</td>
               <td>{{item?.trackingStatus}}</td>
               <td>{{item?.destinationAddress?.company}}</td>
-              <td>{{item?.serviceProfile}}</td>
+              <td>{{item?.carrierProfile}}</td>
               <td>{{item?.amount}} {{item?.currency}}</td>
               <td><button type="button" class="btn btn-primary btn-sm"
                   (click)="trackingDetailView(item.id)">Tracking</button></td>

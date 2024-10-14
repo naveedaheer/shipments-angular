@@ -29,15 +29,22 @@ export class ShipmentsComponent {
         ...item,
         manifestedDate: this.parseDate(item.manifestedDate || ''),
       }));
+      this.shipments = [...this.filteredShipments];
     });
   }
 
   searchShipments(event: Event): void {
     const value = (event.target as HTMLInputElement).value.toLowerCase();
+    if (!value) {
+      this.filteredShipments = this.shipments;
+      return;
+    }
+
     this.filteredShipments = this.shipments.filter(shipment =>
-      shipment.trackingNumber.toLowerCase().includes(value) ||
+      shipment.trackingNumber.includes(value) ||
       shipment.trackingStatus.toLowerCase().includes(value) ||
-      shipment.carrierProfile.toLowerCase().includes(value)
+      shipment.carrierProfile.toLowerCase().includes(value) ||
+      shipment?.destinationAddress?.company.toLowerCase().includes(value)
     );
   }
 
