@@ -1,0 +1,17 @@
+<div class="bread-crumb bg-dark text-light py-1 px-3">
+  <nav style="--bs-breadcrumb-divider: '>'; ">
+    <ol class="breadcrumb d-flex mb-0">
+      @for(breadcrumb of breadcrumbs; let last = $last; track breadcrumb){
+      <li class="breadcrumb-item">
+        @if(!last){
+        <a [routerLink]="breadcrumb.url" class="text-light text-decoration-none">{{
+          breadcrumb.label }}</a>
+        }
+        @if(last){
+        <span class="text-light">{{ breadcrumb.label }}</span>
+        }
+      </li>
+      }
+    </ol>
+  </nav>
+</div>

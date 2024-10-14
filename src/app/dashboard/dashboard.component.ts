@@ -4,11 +4,12 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from '../core/components/header/header.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { SidenavComponent } from '../core/components/sidenav/sidenav.component';
+import { BreadcrumbComponent } from '../core/components/breadcrumb/breadcrumb.component';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [ShipmentsComponent, RouterOutlet, HeaderComponent, MatSidenavModule, SidenavComponent],
+  imports: [ShipmentsComponent, RouterOutlet, HeaderComponent, MatSidenavModule, SidenavComponent, BreadcrumbComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })
