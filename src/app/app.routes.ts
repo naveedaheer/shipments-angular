@@ -19,7 +19,7 @@ export const routes: Routes = [
       {
         path: 'tracking/:id',
         loadComponent: () => import('./dashboard/tracking/tracking.component').then(m => m.TrackingComponent),
-        data: { breadcrumb: 'Tracking Details' }
+        data: { breadcrumb: 'Tracking' }
       }
     ]
   },
